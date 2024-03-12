@@ -5,7 +5,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpClient("swapi", client=>
 {
-        client.BaseAddress = new Uri("https://swapi.dev/api/"); 
+        client.BaseAddress = new Uri("https://swapi.py4e.com/api/"); 
 });
 
 var app = builder.Build();
