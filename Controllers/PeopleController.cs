@@ -19,9 +19,10 @@ namespace SwapiMVC.Controllers
         {
             string route = $"people?page={page ?? "1"}";
             HttpResponseMessage response = await _httpClient.GetAsync(route);
+
             var viewModel = await response.Content.ReadFromJsonAsync<ResultsViewModel<PeopleViewModel>>();
-            
-            return View(viewModel);
+
+                return View(viewModel);
         }
     }
 }
